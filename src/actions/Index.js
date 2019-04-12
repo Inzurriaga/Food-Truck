@@ -3,6 +3,6 @@ export const getCurrentPosition = (position) => ({
     position
 })
 
-export const loading = () => ({
+export const loadingDisplay = () => ({
     type: "LOADING"
 })
