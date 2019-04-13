@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from "react-redux"
 import { getCurrentPosition, loadingDisplay } from "../../actions/Index"
 import Header from "../../components/header/Header"
-import Map from "../map/Map"
 import Loading from "../../components/loading/Loading"
+import Home from "../../components/home/Home"
 
 class App extends Component {
   componentDidMount(){
@@ -29,11 +29,9 @@ class App extends Component {
       <Header />
         {
           this.props.loading ? 
-            <div>
-            <Header />
-            <Map />
-            </div>
-           : <Loading />
+            <Loading />
+           : 
+            <Home />
         }
       </div>
     );
