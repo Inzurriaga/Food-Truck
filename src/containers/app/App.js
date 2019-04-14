@@ -24,13 +24,13 @@ class App extends Component {
   }
   
   render() {
+    console.log(this.props.loading)
     return (
       <div className="App">
       <Header />
         {
           this.props.loading ? 
-            <Loading />
-           : 
+            <Loading /> : 
             <Home />
         }
       </div>
@@ -47,4 +47,4 @@ export const mapStateToProps = (state) => ({
   loading: state.loading
 })
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

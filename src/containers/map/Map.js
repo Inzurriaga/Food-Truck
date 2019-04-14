@@ -3,7 +3,7 @@ import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 
 export default class MapContainer extends Component{
     render(){
-        const position = [39.665905, -104.992843]
+        const position = [39.7508006, -104.9987834]
         const positionone = [39.7, -104.992843]
         return(
             <Map className="map" center={position} zoom="15" zoomOffset={this.zoomOffset}>
