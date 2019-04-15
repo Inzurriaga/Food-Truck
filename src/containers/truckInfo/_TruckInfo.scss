@@ -1,0 +1,47 @@
+.truck-info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    article {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 300px 1fr 2fr;
+        grid-template-rows: 300px 1fr;
+        grid-template-areas: 
+            "picture info menu"
+            "description description menu";
+            grid-gap: 10px;
+        border: 10px solid #FEB403;
+        border-radius: 5px;
+        background-color: rgba($color: #ffffff, $alpha: 0.9);
+        width: 90%;
+        height: 90%;
+    }
+}
+
+.picture {
+    grid-area: picture;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid red;
+    border-radius: 100%;
+}
+
+.info {
+    grid-area: info;
+}
+
+.description {
+    grid-area: description;
+    border-radius: 5px;
+    border: 5px solid red;
+}
+
+.menu {
+    grid-area: menu;
+    border-radius: 5px;
+    border: 5px solid brown;
+}
