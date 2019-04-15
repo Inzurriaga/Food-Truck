@@ -8,7 +8,7 @@ import { getTruck } from "../../thunk/GetTruck";
 import {  Switch, Route } from "react-router-dom"
 import TruckInfo from '../truckInfo/TruckInfo';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount(){
     navigator.geolocation.getCurrentPosition(this.getCurrentUserPosition, this.geolocationError)
   }

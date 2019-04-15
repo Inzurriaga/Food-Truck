@@ -1,16 +1,13 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { MapContainer } from "./Map"
-const mockTrucks = []
-const mockPosition = []
+import OptionsTab from "./OptionsTab"
 
-describe("Map", () => {
-    describe("Map", () => {
+describe("OptionsTab", () => {
+    describe("OptionsTab", () => {
         let wrapper;
         beforeEach(() => {
             wrapper = shallow(
-                <MapContainer trucks={mockTrucks}
-                                position={mockPosition}/>
+                <OptionsTab />
             )
         })
         it("should match snap shot", () => {

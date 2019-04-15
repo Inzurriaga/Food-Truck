@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TruckList TruckList should match snap shot 1`] = `
+<div
+  className="truck-list-container"
+/>
+`;

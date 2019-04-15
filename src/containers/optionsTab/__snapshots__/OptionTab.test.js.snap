@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OptionsTab OptionsTab should match snap shot 1`] = `
+<form
+  className="option-tab"
+  style={
+    Object {
+      "left": "-17%",
+    }
+  }
+>
+  <button
+    className="open-button"
+    onClick={[Function]}
+  />
+  <select>
+    <option
+      value="1"
+    >
+      1
+    </option>
+    <option
+      value="5"
+    >
+      5
+    </option>
+    <option
+      value="10"
+    >
+      10
+    </option>
+    <option
+      value="25"
+    >
+      25
+    </option>
+  </select>
+  <button>
+    submit
+  </button>
+</form>
+`;

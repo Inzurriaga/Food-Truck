@@ -5,8 +5,6 @@ export default class OptionsTab extends Component{
         super();
         this.state = {
             distance: 0,
-            cuisine: "",
-            rating: 0,
             open: false,
         }
     }

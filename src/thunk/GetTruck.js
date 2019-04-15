@@ -1,7 +1,6 @@
 import { loadingDisplay, setTruckList } from "../actions/Index"
 
 export const getTruck = (userInfo) => {
-    console.log("hello world", userInfo)
     const option = {
         method: "POST",
         headers: {
@@ -16,8 +15,8 @@ export const getTruck = (userInfo) => {
             if (!response.ok) {
                 throw new Error(response.statusText)
             }
-            const notes = await response.json();
-            dispatch(setTruckList(notes));
+            const trucks = await response.json();
+            dispatch(setTruckList(trucks));
             dispatch(loadingDisplay());
         } catch (error) {
             console.log(error)
