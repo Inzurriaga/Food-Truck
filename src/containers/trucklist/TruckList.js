@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export class TruckList extends Component{
     render(){
         const truckList = this.props.trucks.map(truck => {
             return(
-                <Link>
-                    <div>
+                <NavLink to={`/truck/${truck.id}`}>
+                    <div className="truck-card">
                         <h2>{truck.name}</h2>
                     </div>
-                </Link>
+                </NavLink>
             )
         })
         return(

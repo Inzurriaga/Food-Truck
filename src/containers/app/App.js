@@ -4,7 +4,9 @@ import { getCurrentPosition, loadingDisplay } from "../../actions/Index"
 import Header from "../../components/header/Header"
 import Home from "../../components/home/Home"
 import Loading from "../../components/loading/Loading"
-import { getTruck } from "../../thunk/GetTruck"
+import { getTruck } from "../../thunk/GetTruck";
+import {  Switch, Route } from "react-router-dom"
+import TruckInfo from '../truckInfo/TruckInfo';
 
 class App extends Component {
   componentDidMount(){
@@ -28,8 +30,14 @@ class App extends Component {
       <Header />
         {
           this.props.loading ? 
-            <Loading /> : 
-            <Home />
+            <Loading /> :
+            <Switch>
+              <Home exact path="/"/>
+              <Route exact path="/truck/:id" render={({match}) => {
+              const { id } = match.params
+              return <TruckInfo />
+              }} />
+            </Switch> 
         }
       </div>
     );

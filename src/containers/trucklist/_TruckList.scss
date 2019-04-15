@@ -1,7 +1,16 @@
 .truck-list-container {
+    overflow: scroll;
     background: #ffffff;
     border: 10px solid #FEB403;
     height: 80%;
     width: 30%;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.truck-card {
+    margin: 20px 0px;
+    border: solid 3px black;
+    height: 100px;
     border-radius: 5px;
 }

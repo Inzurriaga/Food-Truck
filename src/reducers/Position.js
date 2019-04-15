@@ -1,7 +1,7 @@
 export const position = (state = null, action) => {
     switch(action.type){
         case "CURRENT_POSITION":
-            return action;
+            return action.position;
         default: 
             return state;
     }
