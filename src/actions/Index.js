@@ -6,3 +6,8 @@ export const getCurrentPosition = (position) => ({
 export const loadingDisplay = () => ({
     type: "LOADING"
 })
+
+export const setTruckList = (trucks) => ({
+    type: "SET_TRUCK",
+    trucks
+})
