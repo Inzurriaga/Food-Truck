@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux"
-import { getCurrentPosition, loadingDisplay } from "../../actions/Index"
+import { getCurrentPosition } from "../../actions/Index"
 import Header from "../../components/header/Header"
 import Home from "../../components/home/Home"
 import Loading from "../../components/loading/Loading"
@@ -15,7 +15,12 @@ class App extends Component {
 
   getCurrentUserPosition = (position) => {
     const currentPosition = [position.coords.latitude, position.coords.longitude]
-    this.props.getTruck()
+    const userInfo = {
+      distance: 10, 
+      latit: position.coords.latitude,
+      long: position.coords.longitude
+    }
+    this.props.getTruck(userInfo)
     this.props.getCurrentPosition(currentPosition)
   }
 
@@ -34,8 +39,11 @@ class App extends Component {
             <Switch>
               <Home exact path="/"/>
               <Route exact path="/truck/:id" render={({match}) => {
-              const { id } = match.params
-              return <TruckInfo />
+                const { id } = match.params
+                const truckInfo = this.props.trucks.find(truck => {
+                  return truck.id == id
+                })
+                return <TruckInfo truckInfo={truckInfo}/>
               }} />
             </Switch> 
         }
@@ -46,12 +54,12 @@ class App extends Component {
 
 export const mapDispatchToProps = (dispatch) => ({
   getCurrentPosition: (position) => dispatch(getCurrentPosition(position)),
-  loadingDisplay: () => dispatch(loadingDisplay()),
-  getTruck: () => dispatch(getTruck())
+  getTruck: (userInfo) => dispatch(getTruck(userInfo))
 })
 
 export const mapStateToProps = (state) => ({
-  loading: state.loading
+  loading: state.loading,
+  trucks: state.trucks
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

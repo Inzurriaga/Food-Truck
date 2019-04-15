@@ -34,24 +34,11 @@ export default class OptionsTab extends Component{
             <form style={tab} className="option-tab">
                 <button onClick={this.openTab} className="open-button"></button>
                 <select>
-                    <option>1</option>
-                    <option>5</option>
-                    <option>10</option>
-                    <option>25</option>
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
                 </select>
-                <select>
-                    <option>mexican</option>
-                    <option>asian</option>
-                    <option>indian</option>
-                    <option>soul food</option>
-                    <option>desert</option>
-                </select>
-                <div>
-                    <input type="radio"></input>
-                    <input type="radio"></input>
-                    <input type="radio"></input>
-                    <input type="radio"></input>
-                </div>
                 <button>submit</button>
             </form>
         )

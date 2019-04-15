@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match snap shot 1`] = `
+<header>
+  <h1>
+    Food Truck
+  </h1>
+</header>
+`;

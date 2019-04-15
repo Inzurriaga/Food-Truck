@@ -1,8 +1,13 @@
 import { loadingDisplay, setTruckList } from "../actions/Index"
 
-export const getTruck = () => {
+export const getTruck = (userInfo) => {
+    console.log("hello world", userInfo)
     const option = {
-        method: "POST"
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userInfo)
     }
     return async (dispatch) => {
         try {

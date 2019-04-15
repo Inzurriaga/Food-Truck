@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should match snap shot 1`] = `
+<div
+  className="home"
+>
+  <OptionsTab />
+  <ConnectFunction />
+  <ConnectFunction />
+</div>
+`;
