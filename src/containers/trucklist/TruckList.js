@@ -6,7 +6,7 @@ export class TruckList extends Component{
     render(){
         const truckList = this.props.trucks.map(truck => {
             return(
-                <NavLink to={`/truck/${truck.id}`}>
+                <NavLink key={truck.id} to={`/truck/${truck.id}`}>
                     <div className="truck-card">
                         <h2>{truck.name}</h2>
                     </div>

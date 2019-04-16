@@ -3,7 +3,7 @@
 exports[`Header should match snap shot 1`] = `
 <header>
   <h1>
-    Food Truck
+    Foodie on Wheels
   </h1>
 </header>
 `;

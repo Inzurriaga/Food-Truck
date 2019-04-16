@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux"
-import { getCurrentPosition } from "../../actions/Index"
-import Header from "../../components/header/Header"
-import Home from "../../components/home/Home"
-import Loading from "../../components/loading/Loading"
-import { getTruck } from "../../thunk/GetTruck";
-import {  Switch, Route } from "react-router-dom"
+import { connect } from "react-redux";
+import { getCurrentPosition } from "../../actions/Index";
+import Header from "../../components/header/Header";
+import Home from "../../components/home/Home";
+import { getTrucksArray } from "../../thunk/GetTrucksArray";
+import {  Switch, Route } from "react-router-dom";
 import TruckInfo from '../truckInfo/TruckInfo';
+
 
 export class App extends Component {
   componentDidMount(){
@@ -20,7 +20,7 @@ export class App extends Component {
       latit: position.coords.latitude,
       long: position.coords.longitude
     }
-    this.props.getTruck(userInfo)
+    this.props.getTrucksArray(userInfo)
     this.props.getCurrentPosition(currentPosition)
   }
 
@@ -29,24 +29,16 @@ export class App extends Component {
   }
   
   render() {
-    console.log(this.props.loading)
     return (
       <div className="App">
       <Header />
-        {
-          this.props.loading ? 
-            <Loading /> :
-            <Switch>
-              <Home exact path="/"/>
-              <Route exact path="/truck/:id" render={({match}) => {
-                const { id } = match.params
-                const truckInfo = this.props.trucks.find(truck => {
-                  return truck.id == id
-                })
-                return <TruckInfo truckInfo={truckInfo}/>
-              }} />
-            </Switch> 
-        }
+        <Switch>
+          <Home exact path="/"/>
+          <Route exact path="/truck/:id" render={({match}) => {
+            const { id } = match.params
+            return <TruckInfo id={id}/>
+          }} />
+        </Switch>
       </div>
     );
   }
@@ -54,7 +46,7 @@ export class App extends Component {
 
 export const mapDispatchToProps = (dispatch) => ({
   getCurrentPosition: (position) => dispatch(getCurrentPosition(position)),
-  getTruck: (userInfo) => dispatch(getTruck(userInfo))
+  getTrucksArray: (userInfo) => dispatch(getTrucksArray(userInfo))
 })
 
 export const mapStateToProps = (state) => ({

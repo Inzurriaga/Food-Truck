@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { MapContainer } from "./Map"
+
 const mockTrucks = []
 const mockPosition = []
 

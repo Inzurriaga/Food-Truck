@@ -19,7 +19,7 @@ export class MapContainer extends Component{
                 {
                     this.props.trucks.map(truck => {
                         return (
-                            <Marker position={truck.position}>
+                            <Marker key={truck.id} position={truck.position}>
                                 <Popup>
                                     {truck.name}
                                     <br/>

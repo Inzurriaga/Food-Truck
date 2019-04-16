@@ -1,4 +1,5 @@
 .truck-info-container{
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,12 +37,19 @@
 
 .description {
     grid-area: description;
-    border-radius: 5px;
-    border: 5px solid red;
+    padding: 15px;
+    border-top: 5px solid red;
 }
 
 .menu {
+    background-color: #ffffff;
     grid-area: menu;
     border-radius: 5px;
     border: 5px solid brown;
+    h2 {
+        font-size: 3em;
+        text-align: center;
+        font-family: 'Tangerine', cursive;
+        color: #31302e;
+    }
 }

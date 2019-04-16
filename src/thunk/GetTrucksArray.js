@@ -1,6 +1,6 @@
 import { loadingDisplay, setTruckList } from "../actions/Index"
 
-export const getTruck = (userInfo) => {
+export const getTrucksArray = (userInfo) => {
     const option = {
         method: "POST",
         headers: {
