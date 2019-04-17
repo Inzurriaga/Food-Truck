@@ -6,7 +6,7 @@ exports[`App App should match snap shot 1`] = `
 >
   <Header />
   <Switch>
-    <Home
+    <ConnectFunction
       exact={true}
       path="/"
     />

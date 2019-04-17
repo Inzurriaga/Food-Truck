@@ -15,8 +15,6 @@ exports[`Map Map should match snap shot 1`] = `
   >
     <ForwardRef(Leaflet(Popup))>
       your current position
-      <br />
-      Easily customizable.
     </ForwardRef(Leaflet(Popup))>
   </ForwardRef(Leaflet(Marker))>
 </Map>

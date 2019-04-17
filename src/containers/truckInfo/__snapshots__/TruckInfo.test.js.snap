@@ -13,17 +13,22 @@ exports[`TruckInfo TruckInfo should match snap shot 1`] = `
     <div
       className="info"
     >
-      truck type like cuisine rating
+      <a
+        href="undefined"
+      />
     </div>
     <div
       className="description"
     >
-      truck description
+      <h2 />
+      <p />
     </div>
     <div
       className="menu"
     >
-      menu
+      <h2>
+        Menu
+      </h2>
     </div>
   </article>
 </section>

@@ -1,6 +1,8 @@
 import React from "react";
 import { shallow } from "enzyme";
-import TruckInfo from "./TruckInfo"
+import { getTruckInfo } from "../../thunk/GetTruckInfo"
+import { TruckInfo, mapDispatchToProps} from "./TruckInfo"
+jest.mock("../../thunk/GetTruckInfo")
 
 describe("TruckInfo", () => {
     describe("TruckInfo", () => {
@@ -14,4 +16,14 @@ describe("TruckInfo", () => {
             expect(wrapper).toMatchSnapshot()
         })
     })
+    describe("mapDispatchToProps", () => {
+        it("should call dispatch with saveHouse", () => {
+            const mockDispatch = jest.fn()
+            const actionToDispatch = getTruckInfo("www")
+            const mappedProps = mapDispatchToProps(mockDispatch)
+            mappedProps.getTruckInfo("www")
+            expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+        })
+    })
+
 })

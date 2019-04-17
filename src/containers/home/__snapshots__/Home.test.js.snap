@@ -1,11 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home should match snap shot 1`] = `
+exports[`Home Home should display loading when loading it true 1`] = `
 <div
   className="home"
 >
-  <OptionsTab />
   <ConnectFunction />
+  <Loading />
+</div>
+`;
+
+exports[`Home Home should match snap shot 1`] = `
+<div
+  className="home"
+>
   <ConnectFunction />
+  <div
+    className="home-main"
+  >
+    <ConnectFunction />
+    <ConnectFunction />
+  </div>
 </div>
 `;

@@ -5,7 +5,7 @@ import Map from "../../containers/map/Map";
 import Loading from "../../components/loading/Loading"
 import TruckList from "../../containers/trucklist/TruckList";
 
-export  class Home extends Component{
+export class Home extends Component{
     render(){
         return(
             <div className="home">
