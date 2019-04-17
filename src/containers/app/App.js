@@ -6,6 +6,7 @@ import Home from "../home/Home";
 import { getTrucksArray } from "../../thunk/GetTrucksArray";
 import {  Switch, Route } from "react-router-dom";
 import TruckInfo from '../truckInfo/TruckInfo';
+import { SignIn } from "../signIn/SignIn"
 
 
 export class App extends Component {
@@ -35,7 +36,8 @@ export class App extends Component {
       <div className="App">
       <Header />
         <Switch>
-          <Home exact path="/"/>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/signin" component={SignIn}/>
           <Route exact path="/truck/:id" render={({match}) => {
             const { id } = match.params
             return <TruckInfo id={id}/>

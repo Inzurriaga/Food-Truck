@@ -16,3 +16,12 @@ export const errorHandling = (error) => ({
     type: "ERROR",
     error
 })
+
+export const setUser = (userinfo) => ({
+    tyep: "SIGN_IN",
+    userinfo
+})
+
+export const signOut = () => ({
+    type: "SIGN_OUT"
+})

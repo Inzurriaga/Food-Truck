@@ -1,9 +1,12 @@
 header {
+    position: relative;
     height: 15%;
     padding: 10px 40px;
     background-color: #D9371E;
     div {
         display: flex;
+        width: 600px;
+        margin: 0px auto;
         justify-content: center;
         h1 {
             color: #1F2326;
@@ -13,12 +16,27 @@ header {
         }
         img {
             margin: 0px 10px;
-            width: 15%;
-            height: 15%;
+            width: 200px;
+            height: 120px;
         }
     }
 }
 
 .header {
+    display: flex;
     text-decoration: none;
+}
+
+.sign-in {
+    cursor: pointer;
+    text-decoration: none;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    right: 10%;
+    bottom: 40%;
+    background-color: #ffffff;
+    border: 5px solid #FEB403;
+    border-radius: 50px;
 }

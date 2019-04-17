@@ -1,0 +1,16 @@
+.truck-signin-form {
+    display: flex;
+    justify-content: space-around;
+    height: 350px;
+    padding: 20px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: #D9371E;
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        div {
+            text-align: center;
+        }
+    }
+}

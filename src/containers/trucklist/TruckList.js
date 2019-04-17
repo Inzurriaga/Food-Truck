@@ -17,6 +17,10 @@ export class TruckList extends Component{
         return(
             <div className="truck-list-container">
                 {
+                    this.props.trucks.length === 0 ? 
+                    <div className="distance-error">
+                        <p>No result<br/> found <br/> change settings to find <br/> trucks around you</p>
+                    </div> :
                     truckList
                 }
             </div>
