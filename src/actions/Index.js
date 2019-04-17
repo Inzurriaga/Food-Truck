@@ -11,3 +11,8 @@ export const setTruckList = (trucks) => ({
     type: "SET_TRUCK",
     trucks
 })
+
+export const errorHandling = (error) => ({
+    type: "ERROR",
+    error
+})

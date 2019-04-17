@@ -1,5 +1,5 @@
 import React from "react"
-import { getTruck} from "./GetTruck"
+import { getTrucksArray} from "./GetTrucksArray"
 import { loadingDisplay, setTruckList } from "../actions/Index"
 
 describe("GetTruck Thunk", () => {
@@ -8,7 +8,7 @@ describe("GetTruck Thunk", () => {
         mockDispatch = jest.fn()
       })
     it("calls dispatch with the loadingDisplay action", () =>  {
-        const thunk = getTruck()
+        const thunk = getTrucksArray()
         thunk(mockDispatch)
         expect(mockDispatch).toHaveBeenCalledWith(loadingDisplay())
     })
@@ -22,7 +22,7 @@ describe("GetTruck Thunk", () => {
                   })
               })
         )
-        const thunk = getTruck()
+        const thunk = getTrucksArray()
         await thunk(mockDispatch)
         expect(mockDispatch).toHaveBeenCalledWith(setTruckList(mockTrucks))
         expect(mockDispatch).toHaveBeenCalledWith(loadingDisplay())
@@ -33,7 +33,7 @@ describe("GetTruck Thunk", () => {
                 ok: false
               })
         )
-        const thunk = getTruck()
+        const thunk = getTrucksArray()
         thunk(mockDispatch)
         expect(mockDispatch).toHaveBeenCalledWith(loadingDisplay())
     })

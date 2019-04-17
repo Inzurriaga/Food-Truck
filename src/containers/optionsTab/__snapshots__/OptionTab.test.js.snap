@@ -5,37 +5,72 @@ exports[`OptionsTab OptionsTab should match snap shot 1`] = `
   className="option-tab"
   style={
     Object {
-      "left": "-17%",
+      "left": "-22%",
     }
   }
 >
-  <button
+  <div
     className="open-button"
     onClick={[Function]}
+    style={
+      Object {
+        "transform": "rotate(0deg)",
+      }
+    }
   />
-  <select>
-    <option
-      value="1"
+  <h2>
+    Settings
+  </h2>
+  <section
+    className="location"
+  >
+    <h3>
+      Location
+    </h3>
+    <input
+      className="location"
+      onChange={[Function]}
+      value=""
+    />
+  </section>
+  <section>
+    <h3>
+      Distance
+    </h3>
+    <div
+      className="select"
     >
-      1
-    </option>
-    <option
-      value="5"
-    >
-      5
-    </option>
-    <option
-      value="10"
-    >
-      10
-    </option>
-    <option
-      value="25"
-    >
-      25
-    </option>
-  </select>
-  <button>
+      <select
+        className="distance"
+        onChange={[Function]}
+      >
+        <option
+          value="1"
+        >
+          1 mile
+        </option>
+        <option
+          value="5"
+        >
+          5 mile
+        </option>
+        <option
+          value="10"
+        >
+          10 mile
+        </option>
+        <option
+          value="25"
+        >
+          25 mile
+        </option>
+      </select>
+    </div>
+  </section>
+  <button
+    className="submit"
+    onClick={[Function]}
+  >
     submit
   </button>
 </form>

@@ -2,8 +2,22 @@
 
 exports[`Header should match snap shot 1`] = `
 <header>
-  <h1>
-    Foodie on Wheels
-  </h1>
+  <Link
+    className="header"
+    to="/"
+  >
+    <div>
+      <h1>
+        Foodie
+      </h1>
+      <img
+        alt="header"
+        src="title-truck.png"
+      />
+      <h1>
+        Wheels
+      </h1>
+    </div>
+  </Link>
 </header>
 `;

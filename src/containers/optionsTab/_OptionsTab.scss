@@ -1,15 +1,73 @@
 .option-tab {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid #1F2326;
+    border-radius: 0px 5px 5px 0px;
     top: 0;
     z-index: 10;
     transition: 0.2s;
-    background: red;
+    background: #D9371E;
     position: absolute;
-    height: 100%;
-    width: 20%;
-    
+    height: 103%;
+    width: 25%;
+    h3 {
+        margin: 0px;
+    }
+    section {
+        margin-bottom: 40px;
+    }
 }
 
 .open-button {
+    background-image: url("./images/arrow.png");
+    background-size: cover;
+    width: 30px;
+    height: 40px;
     position: absolute;
-    right: 0px;
+    top: 5px;
+    right: 5px;
+}
+
+.submit {
+    margin: 0px auto;
+    width: 60%;
+    height: 50px;
+    background-color: #ffffff;
+    border: 5px solid #FEB403;
+    border-radius: 50px;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+}
+
+.select {
+    width: 60%;
+    height: 50px;
+    display: inline-block;
+    background-color: #ffffff;
+    border: 5px solid #FEB403;
+    border-radius:50px;
+    overflow:hidden;
+    text-align-last: center;
+    padding-left: 22px;
+    select {
+        width:100%;
+        height:50px;
+        border:0px;
+        outline:none;
+    }
+}
+
+.location {
+    input {
+        outline: none;
+        width: 70%;
+        height: 50px;
+        background-color: #ffffff;
+        border: 5px solid #FEB403;
+        border-radius:50px;
+    }
 }

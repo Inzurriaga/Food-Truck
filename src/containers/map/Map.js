@@ -12,8 +12,6 @@ export class MapContainer extends Component{
                 <Marker position={this.props.position}>
                     <Popup>
                         your current position
-                        <br/>
-                        Easily customizable.
                     </Popup>
                 </Marker>
                 {
@@ -22,8 +20,6 @@ export class MapContainer extends Component{
                             <Marker key={truck.id} position={truck.position}>
                                 <Popup>
                                     {truck.name}
-                                    <br/>
-                                    Easily customizable.
                                 </Popup>
                             </Marker>
                         )

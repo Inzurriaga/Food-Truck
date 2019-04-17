@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { getCurrentPosition } from "../../actions/Index";
+import { getCurrentPosition, errorHandling } from "../../actions/Index";
 import Header from "../../components/header/Header";
-import Home from "../../components/home/Home";
+import Home from "../home/Home";
 import { getTrucksArray } from "../../thunk/GetTrucksArray";
 import {  Switch, Route } from "react-router-dom";
 import TruckInfo from '../truckInfo/TruckInfo';
@@ -14,18 +14,20 @@ export class App extends Component {
   }
 
   getCurrentUserPosition = (position) => {
-    const currentPosition = [position.coords.latitude, position.coords.longitude]
+    const {getTrucksArray, getCurrentPosition} = this.props
+    const { latitude, longitude } = position.coords
+    const currentPosition = [latitude, longitude]
     const userInfo = {
       distance: 10, 
-      latit: position.coords.latitude,
-      long: position.coords.longitude
+      latit: latitude,
+      long: longitude
     }
-    this.props.getTrucksArray(userInfo)
-    this.props.getCurrentPosition(currentPosition)
+    getTrucksArray(userInfo)
+    getCurrentPosition(currentPosition)
   }
 
   geolocationError = () => {
-    console.log("hello im not working")
+    this.props.errorHandling("GPS not working use the settings to enter a location")
   }
   
   render() {
@@ -46,7 +48,9 @@ export class App extends Component {
 
 export const mapDispatchToProps = (dispatch) => ({
   getCurrentPosition: (position) => dispatch(getCurrentPosition(position)),
-  getTrucksArray: (userInfo) => dispatch(getTrucksArray(userInfo))
+  getTrucksArray: (userInfo) => dispatch(getTrucksArray(userInfo)),
+  errorHandling: (error) => dispatch(errorHandling(error))
+
 })
 
 export const mapStateToProps = (state) => ({

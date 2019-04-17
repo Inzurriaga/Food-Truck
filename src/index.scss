@@ -8,9 +8,9 @@
 @import "./containers/app/App";
 @import "./containers/map/Map";
 @import "./containers/optionsTab/OptionsTab";
-@import "./components/home/Home";
+@import "./containers/home/Home";
 @import "./containers/trucklist/TruckList";
-@import "./containers//truckInfo/TruckInfo";
+@import "./containers/truckInfo/TruckInfo";
 
 body, html, #root, .App {
     height: 100%;

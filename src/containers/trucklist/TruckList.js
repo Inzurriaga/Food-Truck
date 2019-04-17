@@ -6,9 +6,10 @@ export class TruckList extends Component{
     render(){
         const truckList = this.props.trucks.map(truck => {
             return(
-                <NavLink key={truck.id} to={`/truck/${truck.id}`}>
+                <NavLink className="truck-card-link" key={truck.id} to={`/truck/${truck.id}`}>
                     <div className="truck-card">
                         <h2>{truck.name}</h2>
+                        <p>{truck.distance.toFixed(2)} miles</p>
                     </div>
                 </NavLink>
             )
