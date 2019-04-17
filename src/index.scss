@@ -11,6 +11,9 @@
 @import "./containers/home/Home";
 @import "./containers/trucklist/TruckList";
 @import "./containers/truckInfo/TruckInfo";
+@import "./containers/signIn/SignIn";
+@import "./containers/truckSignin/TruckSignin";
+@import "./containers/userSignin/UserSignin";
 
 body, html, #root, .App {
     height: 100%;

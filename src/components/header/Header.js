@@ -6,12 +6,15 @@ export default class Header extends Component{
     render(){
         return (
             <header>
-                <Link className="header" to="/">
                 <div>
-                    <h1>Foodie</h1>
-                    <img src={image} alt="header"/>
-                    <h1>Wheels</h1>
+                    <Link className="header" to="/">
+                        <h1>Foodie</h1>
+                        <img src={image} alt="header"/>
+                        <h1>Wheels</h1>
+                    </Link>
                 </div> 
+                <Link className="sign-in" to="/signin">
+                        Sign in
                 </Link>
             </header>
         )

@@ -1,0 +1,16 @@
+.user-signin-form {
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: #FEB403;
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        div {
+            text-align: center;
+        }
+    }
+}

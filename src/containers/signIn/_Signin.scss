@@ -1,0 +1,34 @@
+.signin-modal {
+    width: 100%;
+    height: 82.55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.8)
+}
+
+.signin-section {
+    border-radius: 5px;
+    height: 500px;
+    width: 500px;
+}
+
+.user-signin {
+    cursor: pointer;
+    outline: none;
+    background-color: #FEB403;
+    border: none;
+    border-radius: 20px 20px 0px 0px;
+    width: 250px;
+    height: 50px;
+}
+
+.truck-signin {
+    cursor: pointer;
+    outline: none;
+    background-color: #D9371E;
+    border: none;
+    border-radius: 20px 20px 0px 0px;
+    width: 250px;
+    height: 50px;
+}
